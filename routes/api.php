@@ -9,7 +9,7 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::get('/jobs', [JobController::class, 'index']);
-Route::get('/job/{id}', [JobController::class, 'show']);
-Route::post('/job-add', [JobController::class, 'store']);
-Route::put('/job-edit/{id}', [JobController::class, 'update']);
-Route::delete('/job-delete/{id}', [JobController::class, 'destroy']);
+Route::get('/jobs/{id}', [JobController::class, 'show']);
+Route::post('/jobs', [JobController::class, 'store']);
+Route::put('/jobs/{id}', [JobController::class, 'update']);
+Route::delete('/jobs/{id}', [JobController::class, 'destroy']);
